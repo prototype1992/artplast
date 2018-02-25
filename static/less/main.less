@@ -1,0 +1,320 @@
+@import "reset";
+//@import "grid";
+@import "fonts";
+@import "mixins";
+@import "var";
+@import "keyframes";
+
+body .fancybox-opened .fancybox-skin {
+  //padding: 0!important;
+}
+
+// plugins css import
+//@import "../libs/bootstrap/css/bootstrap.css";
+@import "../libs/fancybox/jquery.fancybox.css";
+//@import "../libs/lightslider/css/lightslider.css";
+//@import "../libs/lightgallery/css/lightGallery.css";
+@import "../libs/owl.carousel/assets/owl.carousel.less";
+//@import "../libs/jquery.custom-scrollbar/jquery.custom-scrollbar";
+
+
+// plugins css import end
+
+// page imports
+@import "index";
+
+
+button {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.owl-carousel .owl-stage-outer {
+  padding: 2px;
+}
+.owl-carousel.owl-loaded {
+  padding: 1px;
+}
+.owl-carousel .owl-item img {
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.owl-item.active:nth-child(4) {
+  width: 281px!important;
+}
+.owl-item:last-child {
+  width: 281px!important;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-next span, .fancybox-prev span {
+  background-image: url('../img/modal-close.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fancybox-close {
+  width: 25px;
+  height: 25px;
+  top: -30px;
+  right: -30px;
+}
+
+.file-input-main {
+  &__field {
+    display: none;
+  }
+  &__label {
+    color: @color-orange;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-image: url('../img/orange-dotted.png');
+      background-repeat: repeat-x;
+    }
+    &:before {
+      display: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+      background-image: url('../img/shipping-addresses__img.png');
+      width: 18px;
+      height: 16px;
+    }
+  }
+  .file-input-main__label--active {
+    padding-left: 27px;
+    &:after {
+      left: 27px;
+      width: 86%;
+    }
+    &:before {
+      display: block;
+    }
+  }
+  .file-delete {
+    display: none;
+    vertical-align: middle;
+    margin-left: 9px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/shipping-addresses__delete.png');
+    width: 17px;
+    height: 17px;
+  }
+  .file-delete--active {
+    display: inline-block;
+  }
+}
+
+.file-input-payment {
+  display: inline-block;
+  &__field {
+    display: none;
+  }
+  &__label {
+    color: @color-orange;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-image: url('../img/orange-dotted.png');
+      background-repeat: repeat-x;
+    }
+    &:before {
+      display: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+      background-image: url('../img/shipping-addresses__img.png');
+      width: 18px;
+      height: 16px;
+    }
+  }
+  .file-input-payment__field--active {
+    padding-left: 20px;
+    &:after {
+      left: 20px;
+      width: 90%;
+    }
+    &:before {
+      display: block;
+      background-image: url('../img/file-fix-icon.png');
+      width: 8px;
+      height: 19px;
+      top: auto;
+      bottom: 0;
+    }
+  }
+  .file-delete {
+    display: none;
+    vertical-align: middle;
+    margin-left: 9px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/shipping-addresses__delete.png');
+    width: 17px;
+    height: 17px;
+  }
+  .file-delete--active {
+    display: inline-block;
+  }
+}
+
+.file-input-producing {
+
+  &__field {
+    display: none;
+  }
+  &__label {
+    color: @color-orange;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-image: url('../img/orange-dotted.png');
+      background-repeat: repeat-x;
+    }
+    &:before {
+      display: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+      background-image: url('../img/shipping-addresses__img.png');
+      width: 18px;
+      height: 16px;
+    }
+  }
+  .file-input-producing__label--active {
+    padding-left: 27px;
+    &:after {
+      left: 27px;
+      width: 86%;
+    }
+    &:before {
+      content: '';
+      display: block;
+    }
+  }
+  .file-delete {
+    display: none;
+    vertical-align: middle;
+    margin-left: 9px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/shipping-addresses__delete.png');
+    width: 17px;
+    height: 17px;
+  }
+  .file-delete--active {
+    display: inline-block;
+  }
+}
+
+.file-input-vakansii {
+  display: inline-block;
+  .file-input-vakansii__field {
+    display: none;
+  }
+  .file-input-vakansii__label {
+    color: @color-orange;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-image: url('../img/orange-dotted.png');
+      background-repeat: repeat-x;
+    }
+    &:before {
+      display: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+      background-image: url('../img/shipping-addresses__img.png');
+      width: 18px;
+      height: 16px;
+    }
+  }
+  .file-input-vakansii__label--active {
+    padding-left: 20px;
+    &:after {
+      left: 20px;
+      width: 90%;
+    }
+    &:before {
+      display: block;
+      background-image: url('../img/file-fix-icon.png');
+      width: 8px;
+      height: 19px;
+      top: auto;
+      bottom: 0;
+    }
+  }
+  .file-delete {
+    display: none;
+    vertical-align: middle;
+    margin-left: 9px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/shipping-addresses__delete.png');
+    width: 17px;
+    height: 17px;
+  }
+  .file-delete--active {
+    display: inline-block;
+  }
+}
+
+
+
+
+.nicescroll-cursors {
+  right: 7px!important;
+  background-color: #c9c9c9!important;
+  height: 80px;
+  z-index: 10000;
+}
+
+html body .main .tobookmarks--active {
+  background-image: url('../img/tobookmarks--active.png');
+}
+
+.fancybox-inner, .fancybox-outer, .fancybox-skin {
+  //background-color: #f4f4f4;
+}
